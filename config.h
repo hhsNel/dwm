@@ -8,6 +8,16 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
+static const char col_black[]	    = "#000000";
+static const char col_darkgreen[]   = "#009f00";
+static const char col_darkgy[]	    = "#559400";
+static const char col_darkyg[]	    = "#aa8a00";
+static const char col_darkyellow[]  = "#ff7f00";
+static const char col_lightgreen[]  = "#00ff00";
+static const char col_lightgy[]     = "#9fbf00";
+static const char col_lightyg[]     = "#ffbf00";
+static const char col_lightyellow[] = "#ffff00";
+
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
