@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -19,6 +20,15 @@ static const char col_lightgy[]     = "#9fbf00";
 static const char col_lightyg[]     = "#ffbf00";
 static const char col_lightyellow[] = "#ffff00";
 
+static const char col_username[]    = "#ff0000";
+static const char col_hostname[]    = "#00ff00";
+static const char col_cpu[]         = "#0000ff";
+static const char col_ram[]         = "#7f00ff";
+static const char col_battery[]     = "#7f7f7f";
+static const char col_date[]        = "#ffffff";
+static const char col_status_bg[]   = "#000000";
+static const char col_status_fg[]   = "#ff7f00";
+
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -26,8 +36,15 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg             bg              border   */
-	[SchemeNorm] = { col_darkgy,    col_black,      col_darkgy     },
-	[SchemeSel]  = { col_black, col_darkyellow, col_darkyellow },
+	[SchemeNorm] = { col_darkgy,    col_black,      col_darkgy     },	// normal
+	[SchemeSel]  = { col_black, col_darkyellow, col_darkyellow },   	// selected
+	{ col_status_bg, col_status_fg, col_status_bg },                 	// normal status
+	{ col_status_bg, col_username, col_status_bg },                 	// username status
+	{ col_status_bg, col_hostname, col_status_bg },                 	// hostname status
+	{ col_status_bg, col_cpu, col_status_bg },                      	// cpu status
+	{ col_status_bg, col_ram, col_status_bg },                      	// ram status
+	{ col_status_bg, col_battery, col_status_bg },                      	// bat status
+	{ col_status_bg, col_date, col_status_bg },                      	// date status
 };
 
 /* tagging */
