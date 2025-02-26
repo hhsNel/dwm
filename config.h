@@ -21,15 +21,6 @@ static const char col_lightgy[]     = "#9fbf00";
 static const char col_lightyg[]     = "#ffbf00";
 static const char col_lightyellow[] = "#ffff00";
 
-static const char col_username[]    = "#ff0000";
-static const char col_hostname[]    = "#00ff00";
-static const char col_cpu[]         = "#0000ff";
-static const char col_ram[]         = "#7f00ff";
-static const char col_battery[]     = "#7f7f7f";
-static const char col_date[]        = "#ffffff";
-static const char col_status_bg[]   = "#000000";
-static const char col_status_fg[]   = "#ff7f00";
-
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
