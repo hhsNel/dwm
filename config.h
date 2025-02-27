@@ -30,13 +30,6 @@ static const char *colors[][3]      = {
 	/*               fg             bg              border   */
 	[SchemeNorm] = { col_darkgy,    col_black,      col_darkgy     },	// normal
 	[SchemeSel]  = { col_black, col_darkyellow, col_darkyellow },   	// selected
-	{ col_status_bg, col_status_fg, col_status_bg },                 	// normal status
-	{ col_status_bg, col_username, col_status_bg },                 	// username status
-	{ col_status_bg, col_hostname, col_status_bg },                 	// hostname status
-	{ col_status_bg, col_cpu, col_status_bg },                      	// cpu status
-	{ col_status_bg, col_ram, col_status_bg },                      	// ram status
-	{ col_status_bg, col_battery, col_status_bg },                      	// bat status
-	{ col_status_bg, col_date, col_status_bg },                      	// date status
 };
 
 /* tagging */
