@@ -119,6 +119,8 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,        spawn, {.v = mutevol } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ 0,                            XK_Print,                spawn, SHCMD("ffcast png $HOME/Screenshots/$(date +%s)-UNIX-screenshot.png") },
+	{ ShiftMask,                    XK_Print,                spawn, SHCMD("ffcast -s png $HOME/Screenshots/$(date +%s)-UNIX-screenshot.png") },
 };
 
 /* button definitions */
