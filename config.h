@@ -10,7 +10,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 2;        /* 2 is the default spacing around the bar's font */
 /* static const char *fonts[]          = { "monospace:size=16" }; */
 static const char *fonts[]          = { "Terminus:size=12" };
-static const char dmenufont[]       = "monospace:size=12";
+static const char dmenufont[]       = "Terminus:size=12";
 static const char col_black[]	    = "#000000";
 static const char col_darkgreen[]   = "#009f00";
 static const char col_darkgy[]	    = "#559400";
@@ -42,7 +42,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       0,            0,           -1 },
+	{ "Librewolf",NULL,       "Librewolf",1<<2,         0,           -1 },
 };
 
 /* layout(s) */
