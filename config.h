@@ -9,8 +9,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 2;        /* 2 is the default spacing around the bar's font */
 /* static const char *fonts[]          = { "monospace:size=16" }; */
-static const char *fonts[]          = { "Terminus:size=16" };
-static const char dmenufont[]       = "monospace:size=16";
+static const char *fonts[]          = { "Terminus:size=12" };
+static const char dmenufont[]       = "monospace:size=12";
 static const char col_black[]	    = "#000000";
 static const char col_darkgreen[]   = "#009f00";
 static const char col_darkgy[]	    = "#559400";
@@ -121,6 +121,7 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ 0,                            XK_Print,                spawn, SHCMD("ffcast png $HOME/Screenshots/$(date +%s)-UNIX-screenshot.png") },
 	{ ShiftMask,                    XK_Print,                spawn, SHCMD("ffcast -s png $HOME/Screenshots/$(date +%s)-UNIX-screenshot.png") },
+	{ ControlMask,                  XK_Print,                spawn, SHCMD("ffcast -w png $HOME/Screenshots/$(date +%s)-UNIX-screenshot.png") },
 };
 
 /* button definitions */
