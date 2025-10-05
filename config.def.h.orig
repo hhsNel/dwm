@@ -8,8 +8,9 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 2;        /* 2 is the default spacing around the bar's font */
-static const char *fonts[]          = { "monospace:size=16" };
-static const char dmenufont[]       = "monospace:size=16";
+/* static const char *fonts[]          = { "monospace:size=16" }; */
+static const char *fonts[]          = { "Terminus:size=12" };
+static const char dmenufont[]       = "Terminus:size=12";
 static const char col_black[]	    = "#000000";
 static const char col_darkgreen[]   = "#009f00";
 static const char col_darkgy[]	    = "#559400";
@@ -27,8 +28,8 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg             bg              border   */
-	[SchemeNorm] = { col_darkgy,    col_black,      col_darkgy     },
-	[SchemeSel]  = { col_black, col_darkyellow, col_darkyellow },
+	[SchemeNorm] = { col_darkgy,    col_black,      col_darkgy     },	// normal
+	[SchemeSel]  = { col_black, col_darkyellow, col_darkyellow },   	// selected
 };
 
 /* tagging */
@@ -41,7 +42,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       0,            0,           -1 },
+	{ "Librewolf",NULL,       "Librewolf",1<<2,         0,           -1 },
 };
 
 /* layout(s) */
@@ -49,6 +50,7 @@ static const float mfact     = 0.6;  /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int refreshrate = 60;  /* refresh rate (per second) for client move/resize */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -118,6 +120,9 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,        spawn, {.v = mutevol } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ 0,                            XK_Print,                spawn, SHCMD("ffcast png $HOME/Screenshots/$(date +%s)-UNIX-screenshot.png") },
+	{ ShiftMask,                    XK_Print,                spawn, SHCMD("ffcast -s png $HOME/Screenshots/$(date +%s)-UNIX-screenshot.png") },
+	{ ControlMask,                  XK_Print,                spawn, SHCMD("ffcast -w png $HOME/Screenshots/$(date +%s)-UNIX-screenshot.png") },
 };
 
 /* button definitions */
